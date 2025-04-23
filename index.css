@@ -1,49 +1,67 @@
 body {
-    font-family: sans-serif;
-    background-color: #c9cfe7;
-    margin: 0;
-    padding: 0;
-  }
-  
+  font-family: sans-serif;
+  background-color: #c9cfe7;
+  margin: 0;
+  padding: 0;
+}
 
-  
+/*BANNER*/
+
+header {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTAINER E BOTÕES */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.botao {
+  background-color: rgb(114, 144, 196);
+  color: rgb(34, 32, 32);
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.botao:hover {
+  background-color: yellow;
+  color: rgb(62, 7, 212);
+}
+
+/* MEDIA QUERIES PARA CELULAR */
+
+@media (max-width: 600px) {
   .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    margin-top: 80px;
-  }
-  
-  .botao {
-    background-color: rgb(114, 144, 196);
-    color: rgb(34, 32, 32);
-    padding: 16px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .botao:hover {
-    background-color: yellow;
-    color: rgb(62, 7, 212);
+    grid-template-columns: 1fr; /* Coloca um botão por linha */
+    padding: 10px;
+    margin-top: 40px;
   }
 
-  /*BANNER*/
-  
+  .botao {
+    padding: 12px;
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+  }
+
   header {
-    width: 100%;
-    height: 130px; /* altura aproximada de dois dedos, pode ajustar */
-    overflow: hidden; /* esconde qualquer parte da imagem que ultrapasse */
+    height: 100px; /* Diminui o banner para caber melhor em telas pequenas */
   }
-  
-  header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* a imagem vai preencher o espaço sem distorcer */
-  }
-  
+}  
